@@ -1,0 +1,5 @@
+.img-fixed {
+    height: 100px; /* or whatever height fits your design */
+    object-fit: fill; /* makes the image fill the space nicely without distortion */
+  }
+  
