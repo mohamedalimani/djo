@@ -1,0 +1,7 @@
+<div class="d-flex flex-column align-items-center mt-5">
+    <form (ngSubmit)="authenticateToken()" #loginForm="ngForm" class="d-fle">
+        <label for="key" class="mb-2"><h3>token</h3></label><br>
+        <input class="form-control-sm" type="text" name="key" [(ngModel)]="key" minlength="5"><br>
+        <button [disabled]="key.length < 5" type="submit" class="btn btn-primary mt-2">login</button>
+    </form>
+</div>
