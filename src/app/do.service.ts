@@ -16,7 +16,6 @@ export class DoService {
   constructor(private http:HttpClient){}
 
   start():Observable<any>{
-    console.log(this.HttpOptions);
     return this.http.post(`${this.API_URL}/start`,{},this.HttpOptions);
   }
 
