@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.key);
     if (this.key == '') console.log('empty key, return to login page');
     this.dos.authenticateToken(this.key).subscribe({
       next:(res)=>{
@@ -37,6 +36,7 @@ export class HomeComponent implements OnInit {
     this.getCurrentJournal();
     //get history (journals)
     this.getJournals();
+    
   }
 
   start(){
