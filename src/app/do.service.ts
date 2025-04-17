@@ -7,20 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class DoService {
 
-  private API_URL = 'http://localhost:3000'
+  private API_URL = 'https://djo-back.onrender.com';
 
   HttpOptions={
     headers:new HttpHeaders().set('Authorization',localStorage.getItem('key') || '')
   }
-  
-  constructor(private http:HttpClient){}
 
-  start():Observable<any>{
-    return this.http.post(`${this.API_URL}/start`,{},this.HttpOptions);
-  }
+  constructor(private http:HttpClient){}
 
   authenticateToken(key:string):Observable<any>{
     return this.http.get(`${this.API_URL}/authenticateToken?key=${key}`);
+  }
+
+
+  start():Observable<any>{
+    return this.http.post(`${this.API_URL}/start`,{},this.HttpOptions);
   }
 
   getDrinks(journal:number):Observable<any>{
