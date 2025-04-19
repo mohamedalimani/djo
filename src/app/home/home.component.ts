@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit {
     this.dos.getDrinks(journal).subscribe({
       next:(res)=>{
         this.drinks=res
+        console.log(res);
       }
     })
   }

@@ -57,6 +57,9 @@
             <th scope="col">eau 0.5L</th>
             <th scope="col">eau 1L</th>
             <th scope="col">coke</th>
+            <th scope="col">milk shake</th>
+            <th scope="col">frappucino</th>
+            <th scope="col">mojitos</th>
           </tr>
         </thead>
         <tbody>
@@ -76,6 +79,9 @@
             <td>{{ item['eau 0.5L'] || 0 }}</td>
             <td>{{ item['eau 1L'] || 0 }}</td>
             <td>{{ item.coke || 0 }}</td>
+            <td>{{ item['milk shake'] || 0 }}</td>
+            <td>{{ item.frappucino || 0 }}</td>
+            <td>{{ item.mojitos || 0 }}</td>
           </tr>
         </tbody>
       </table>
